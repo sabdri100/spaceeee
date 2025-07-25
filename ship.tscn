@@ -1,10 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://b5dhvhel125t6"]
+[gd_scene load_steps=8 format=3 uid="uid://b5dhvhel125t6"]
 
 [ext_resource type="Script" uid="uid://bhmahvd4t86t4" path="res://ship.gd" id="1_78o8j"]
 [ext_resource type="Script" uid="uid://dhtu2q74p3hne" path="res://component/move_component.gd" id="2_4cq66"]
 [ext_resource type="Texture2D" uid="uid://ckpxwh5ixx7oc" path="res://art/Untitled 07-17-2025 11-39-14 (1).png" id="2_78o8j"]
 [ext_resource type="Script" uid="uid://b7ly4fjiwllun" path="res://component/move_input_component.gd" id="3_v4325"]
-[ext_resource type="Script" uid="uid://6mt86klw3mk2" path="res://component/shipclamp.gd" id="4_c3vuw"]
 [ext_resource type="Script" uid="uid://cn3dlcixqtmey" path="res://component/spawn_bullet.gd" id="6_pb2vj"]
 [ext_resource type="PackedScene" uid="uid://2ljr7pwvr50d" path="res://bullet.tscn" id="7_qxn0r"]
 
@@ -20,10 +19,11 @@ animations = [{
 }]
 
 [node name="ship" type="Node2D"]
+position = Vector2(80, 5)
 script = ExtResource("1_78o8j")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(0, 233)
+position = Vector2(2, 225)
 scale = Vector2(0.0799808, 0.074482)
 sprite_frames = SubResource("SpriteFrames_4cq66")
 
@@ -38,19 +38,14 @@ script = ExtResource("3_v4325")
 move_component = NodePath("../MoveComponent")
 metadata/_custom_type_script = "uid://b7ly4fjiwllun"
 
-[node name="ShipClamp" type="Node2D" parent="." node_paths=PackedStringArray("actor")]
-position = Vector2(-39, 231)
-script = ExtResource("4_c3vuw")
-actor = NodePath("..")
-metadata/_custom_type_script = "uid://6mt86klw3mk2"
-
 [node name="leftcannon" type="Marker2D" parent="."]
-position = Vector2(3, 230)
+position = Vector2(6, 221)
 
 [node name="rightcannon" type="Marker2D" parent="."]
-position = Vector2(-5, 230)
+position = Vector2(-3, 221)
 
 [node name="SpawnComp" type="Node2D" parent="."]
+position = Vector2(1, 0)
 script = ExtResource("6_pb2vj")
 scene = ExtResource("7_qxn0r")
 metadata/_custom_type_script = "uid://cn3dlcixqtmey"

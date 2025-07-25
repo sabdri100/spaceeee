@@ -15,3 +15,8 @@ func fire_bullet() -> void:
 	var scene_root = get_tree().current_scene
 	spawn_comp.spawn(leftcannon.global_position, scene_root)
 	spawn_comp.spawn(rightcannon.global_position, scene_root)
+
+func _physics_process(delta: float) -> void:
+	var viewRect := get_viewport_rect()
+	position.x = clamp(position.x, 0, viewRect.size.x )
+	position.y = clamp(position.y, 0, viewRect.size.y)
