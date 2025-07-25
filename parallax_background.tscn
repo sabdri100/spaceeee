@@ -21,6 +21,7 @@ stretch_mode = 1
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="."]
 unique_name_in_owner = true
+motion_mirroring = Vector2(0, 340)
 
 [node name="TextureRect" type="TextureRect" parent="ParallaxLayer2"]
 offset_left = -79.0
