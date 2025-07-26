@@ -12,21 +12,21 @@ unique_name_in_owner = true
 
 [node name="TextureRect" type="TextureRect" parent="ParallaxLayer"]
 modulate = Color(0.537011, 0.537011, 0.537011, 1)
-offset_left = -53.0
-offset_top = -12.0
-offset_right = 203.0
-offset_bottom = 244.0
+offset_left = -51.0
+offset_top = -4.0
+offset_right = 245.0
+offset_bottom = 304.0
 texture = ExtResource("2_2pwms")
 stretch_mode = 1
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="."]
 unique_name_in_owner = true
-motion_mirroring = Vector2(0, 340)
+motion_mirroring = Vector2(0, 280)
 
 [node name="TextureRect" type="TextureRect" parent="ParallaxLayer2"]
-offset_left = -79.0
-offset_top = -37.0
-offset_right = 346.0
-offset_bottom = 277.0
+offset_left = -64.0
+offset_top = -32.0
+offset_right = 215.0
+offset_bottom = 224.0
 texture = ExtResource("3_6h8ff")
 stretch_mode = 1

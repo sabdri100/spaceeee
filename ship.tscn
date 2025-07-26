@@ -19,11 +19,11 @@ animations = [{
 }]
 
 [node name="ship" type="Node2D"]
-position = Vector2(80, 5)
+position = Vector2(-1, 6)
 script = ExtResource("1_78o8j")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(2, 225)
+position = Vector2(1, 7)
 scale = Vector2(0.0799808, 0.074482)
 sprite_frames = SubResource("SpriteFrames_4cq66")
 
@@ -39,10 +39,10 @@ move_component = NodePath("../MoveComponent")
 metadata/_custom_type_script = "uid://b7ly4fjiwllun"
 
 [node name="leftcannon" type="Marker2D" parent="."]
-position = Vector2(6, 221)
+position = Vector2(5, 3)
 
 [node name="rightcannon" type="Marker2D" parent="."]
-position = Vector2(-3, 221)
+position = Vector2(-4, 3)
 
 [node name="SpawnComp" type="Node2D" parent="."]
 position = Vector2(1, 0)
