@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://2ljr7pwvr50d"]
+
+[ext_resource type="Script" uid="uid://8c7qteun5asj" path="res://Player/bullet.gd" id="1_d7yj7"]
+[ext_resource type="Texture2D" uid="uid://cbsew455ofco6" path="res://art/Untitled 07-18-2025 12-49-32.png" id="2_ggrph"]
+[ext_resource type="Script" uid="uid://dhtu2q74p3hne" path="res://component/move_component.gd" id="3_fdgrx"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_d7yj7"]
+radius = 2.0
+height = 6.0
+
+[node name="bullet" type="Node2D"]
+script = ExtResource("1_d7yj7")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_ggrph")
+
+[node name="MoveComponent" type="Node" parent="." node_paths=PackedStringArray("actor")]
+script = ExtResource("3_fdgrx")
+velocity = Vector2(0, -150)
+actor = NodePath("..")
+metadata/_custom_type_script = "uid://dhtu2q74p3hne"
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(0, -2.98023e-08)
+scale = Vector2(0.1, 0.2)
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CapsuleShape2D_d7yj7")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

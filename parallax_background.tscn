@@ -21,12 +21,11 @@ stretch_mode = 1
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="."]
 unique_name_in_owner = true
-motion_mirroring = Vector2(0, 280)
+motion_mirroring = Vector2(0, 210)
 
 [node name="TextureRect" type="TextureRect" parent="ParallaxLayer2"]
-offset_left = -64.0
-offset_top = -32.0
-offset_right = 215.0
-offset_bottom = 224.0
+offset_left = -7.0
+offset_right = 272.0
+offset_bottom = 256.0
 texture = ExtResource("3_6h8ff")
 stretch_mode = 1

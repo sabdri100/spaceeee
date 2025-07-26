@@ -1,11 +1,11 @@
 [gd_scene load_steps=8 format=3 uid="uid://b5dhvhel125t6"]
 
-[ext_resource type="Script" uid="uid://bhmahvd4t86t4" path="res://ship.gd" id="1_78o8j"]
+[ext_resource type="Script" uid="uid://bhmahvd4t86t4" path="res://Player/ship.gd" id="1_78o8j"]
 [ext_resource type="Script" uid="uid://dhtu2q74p3hne" path="res://component/move_component.gd" id="2_4cq66"]
 [ext_resource type="Texture2D" uid="uid://ckpxwh5ixx7oc" path="res://art/Untitled 07-17-2025 11-39-14 (1).png" id="2_78o8j"]
 [ext_resource type="Script" uid="uid://b7ly4fjiwllun" path="res://component/move_input_component.gd" id="3_v4325"]
 [ext_resource type="Script" uid="uid://cn3dlcixqtmey" path="res://component/spawn_bullet.gd" id="6_pb2vj"]
-[ext_resource type="PackedScene" uid="uid://2ljr7pwvr50d" path="res://bullet.tscn" id="7_qxn0r"]
+[ext_resource type="PackedScene" uid="uid://2ljr7pwvr50d" path="res://Player/bullet.tscn" id="7_qxn0r"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_4cq66"]
 animations = [{

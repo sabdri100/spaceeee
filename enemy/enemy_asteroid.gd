@@ -12,6 +12,7 @@ var asteorid = [
 	preload("res://art/Asteroid Brown.png")
 ]
 
+
 # Selecciona aleatoriamente el asteoride y ajusta size
 func _ready():
 	randomize()

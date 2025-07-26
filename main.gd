@@ -4,7 +4,7 @@ extends Node2D
 @onready var levels_timer = $LevelsTimer
 @onready var asteroid_timer = $AsteroidSpawnTimer
 
-var asteroid_scene = preload("res://enemy_asteroid.tscn")
+var asteroid_scene = preload("res://enemy/enemy_asteroid.tscn")
 var curr_level = 1
 
 func _ready():	
