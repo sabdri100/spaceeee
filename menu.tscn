@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://cnk2xyw05jdu8"]
+[gd_scene load_steps=11 format=3 uid="uid://cnk2xyw05jdu8"]
 
 [ext_resource type="Script" uid="uid://dwwwffkxvwcad" path="res://menu.gd" id="1_mae5d"]
 [ext_resource type="Texture2D" uid="uid://bedkfmy4q02ys" path="res://art/Untitled 07-23-2025 12-07-23 (1).png" id="2_4hy44"]
@@ -12,18 +12,24 @@ texture = ExtResource("2_4hy44")
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kk3ma"]
 bg_color = Color(0.439049, 0.439049, 0.439049, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nrnbx"]
-bg_color = Color(1, 1, 1, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mae5d"]
+bg_color = Color(0, 0.243634, 0.314762, 1)
 corner_radius_top_left = 4
 corner_radius_top_right = 4
 corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
-shadow_color = Color(0.00180295, 0.00162769, 0.0034287, 0.6)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_iqepy"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h1wq0"]
 bg_color = Color(0.533037, 0.533037, 0.533037, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4hy44"]
+bg_color = Color(0, 0.243137, 0.313726, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
 
 [node name="menu" type="Control"]
 layout_mode = 3
@@ -43,44 +49,48 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_l48gv")
 
-[node name="Button" type="Button" parent="."]
+[node name="Start_Button" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -38.0
-offset_top = -15.0
-offset_right = 39.0
-offset_bottom = 16.0
+offset_left = -22.0
+offset_top = 29.0
+offset_right = 24.0
+offset_bottom = 53.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 11
+theme_override_colors/font_color = Color(0, 0.513726, 0, 1)
+theme_override_fonts/font = ExtResource("3_ytr4m")
+theme_override_font_sizes/font_size = 15
 theme_override_styles/focus = SubResource("StyleBoxEmpty_ecwwl")
 theme_override_styles/hover = SubResource("StyleBoxFlat_kk3ma")
-theme_override_styles/normal = SubResource("StyleBoxFlat_nrnbx")
+theme_override_styles/normal = SubResource("StyleBoxFlat_mae5d")
 text = "Start"
+icon_alignment = 1
 
-[node name="Button2" type="Button" parent="."]
+[node name="Exit_Button" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -38.0
-offset_top = 23.0
-offset_right = 39.0
-offset_bottom = 54.0
+offset_left = -22.0
+offset_top = 57.0
+offset_right = 24.0
+offset_bottom = 80.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 11
+theme_override_colors/icon_normal_color = Color(0.807843, 0, 0, 1)
+theme_override_colors/font_color = Color(0.579264, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_ytr4m")
+theme_override_font_sizes/font_size = 15
 theme_override_styles/focus = SubResource("StyleBoxEmpty_iqepy")
 theme_override_styles/hover = SubResource("StyleBoxFlat_h1wq0")
-theme_override_styles/normal = SubResource("StyleBoxFlat_nrnbx")
+theme_override_styles/normal = SubResource("StyleBoxFlat_4hy44")
 text = "Exit"
 
 [node name="Label" type="Label" parent="."]
@@ -88,16 +98,19 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -20.0
-offset_top = 52.0
-offset_right = 34.0
-offset_bottom = 85.0
+offset_left = -68.0
+offset_top = 38.0
+offset_right = 74.0
+offset_bottom = 83.0
 grow_horizontal = 2
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_offset_y = 3
 theme_override_fonts/font = ExtResource("3_ytr4m")
-theme_override_font_sizes/font_size = 24
-text = "Star"
+theme_override_font_sizes/font_size = 33
+text = "Star "
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
 
-[connection signal="pressed" from="Button" to="." method="_on_start_pressed"]
-[connection signal="pressed" from="Button2" to="." method="_on_exit_2_pressed"]
+[connection signal="pressed" from="Start_Button" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Exit_Button" to="." method="_on_exit_2_pressed"]
