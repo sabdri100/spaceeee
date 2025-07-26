@@ -3,11 +3,12 @@ extends Node2D
 @onready var enemy_spawner = $EnemySpawner
 @onready var levels_timer = $LevelsTimer
 @onready var asteroid_timer = $AsteroidSpawnTimer
+@onready var level_intro = $LevelIntro
 
 var asteroid_scene = preload("res://enemy/enemy_asteroid.tscn")
 var curr_level = 1
 
-func _ready():	
+func _ready():
 	# Maneja los asteroid (Nivel 1)
 	#levels_timer.start()
 	asteroid_timer.start()
