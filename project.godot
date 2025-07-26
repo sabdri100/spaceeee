@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="space game"
-run/main_scene="uid://71t16126a4j2"
+run/main_scene="uid://cnk2xyw05jdu8"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 

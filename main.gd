@@ -7,7 +7,8 @@ extends Node2D
 var asteroid_scene = preload("res://enemy_asteroid.tscn")
 var curr_level = 1
 
-func _ready():
+func _ready():	
+	# Maneja los asteroid (Nivel 1)
 	#levels_timer.start()
 	asteroid_timer.start()
 
