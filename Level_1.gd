@@ -40,3 +40,4 @@ func _on_asteroid_spawn_timer_timeout():
 func _on_levels_timer_timeout() -> void:
 	asteroid_timer.stop()
 	print("Nivel Completado!")   # quitar
+	get_tree().change_scene_to_file("res://level_2_intro.tscn")
