@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://ciaxiwsjokc1o"]
+[gd_scene load_steps=13 format=3 uid="uid://bgk53sbfgsjgh"]
 
 [ext_resource type="Script" uid="uid://dn2kevqt1iyt7" path="res://win_screen.gd" id="1_5hoe6"]
 [ext_resource type="Texture2D" uid="uid://bedkfmy4q02ys" path="res://art/Untitled 07-23-2025 12-07-23 (1).png" id="2_g6jvr"]

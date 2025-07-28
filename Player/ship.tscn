@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://b5dhvhel125t6"]
+[gd_scene load_steps=10 format=3 uid="uid://b5dhvhel125t6"]
 
 [ext_resource type="Script" uid="uid://bhmahvd4t86t4" path="res://Player/ship.gd" id="1_78o8j"]
 [ext_resource type="Script" uid="uid://dhtu2q74p3hne" path="res://component/move_component.gd" id="2_4cq66"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://b7ly4fjiwllun" path="res://component/move_input_component.gd" id="3_v4325"]
 [ext_resource type="Script" uid="uid://cn3dlcixqtmey" path="res://component/spawn_bullet.gd" id="6_pb2vj"]
 [ext_resource type="PackedScene" uid="uid://2ljr7pwvr50d" path="res://Player/bullet.tscn" id="7_qxn0r"]
+[ext_resource type="Script" uid="uid://cm6pcrfdn87aq" path="res://Player/ship_hit_box.gd" id="7_ufs3a"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_4cq66"]
 animations = [{
@@ -17,6 +18,9 @@ animations = [{
 "name": &"default",
 "speed": 5.0
 }]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_24fn8"]
+radius = 6.0
 
 [node name="ship" type="Node2D"]
 position = Vector2(-1, 6)
@@ -53,3 +57,12 @@ metadata/_custom_type_script = "uid://cn3dlcixqtmey"
 [node name="FireRate" type="Timer" parent="."]
 wait_time = 0.504
 autostart = true
+
+[node name="ship_hit_box" type="Area2D" parent="."]
+script = ExtResource("7_ufs3a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ship_hit_box"]
+position = Vector2(0, 7)
+shape = SubResource("CircleShape2D_24fn8")
+
+[connection signal="body_entered" from="ship_hit_box" to="." method="_on_ship_hit_box_body_entered"]
