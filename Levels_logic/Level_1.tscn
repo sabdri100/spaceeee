@@ -1,0 +1,43 @@
+[gd_scene load_steps=5 format=3 uid="uid://71t16126a4j2"]
+
+[ext_resource type="Script" uid="uid://cysaoo2e525ej" path="res://Levels_logic/Level_1.gd" id="1_65pcf"]
+[ext_resource type="PackedScene" uid="uid://b5dhvhel125t6" path="res://Player/ship.tscn" id="2_a0j4s"]
+[ext_resource type="PackedScene" uid="uid://pg3cx4mpe6w2" path="res://parallax_background.tscn" id="3_jikk4"]
+[ext_resource type="AudioStream" uid="uid://dm6wgcl0evmwu" path="res://audio/music/02 Dodging Obstacles.mp3" id="4_a0j4s"]
+[ext_resource type="FontFile" uid="uid://dxtfpitcxe58o" path="res://art/GrapeSoda.ttf" id="4_0tv8b"]
+
+[node name="Level_1" type="Node2D"]
+script = ExtResource("1_65pcf")
+
+[node name="ship" parent="." instance=ExtResource("2_a0j4s")]
+
+[node name="EnemySpawner" type="Node2D" parent="."]
+
+[node name="LevelsTimer" type="Timer" parent="."]
+wait_time = 15.0
+autostart = true
+
+[node name="AsteroidSpawnTimer" type="Timer" parent="."]
+wait_time = 0.5
+autostart = true
+
+[node name="spaceBackground" parent="." instance=ExtResource("3_jikk4")]
+
+[node name="Level1Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_a0j4s")
+autoplay = true
+parameters/looping = false
+[node name="TimerLable" type="Label" parent="."]
+offset_left = 121.0
+offset_top = -2.0
+offset_right = 161.0
+offset_bottom = 21.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_0tv8b")
+theme_override_font_sizes/font_size = 15
+text = "15.0"
+horizontal_alignment = 1
+
+[connection signal="timeout" from="LevelsTimer" to="." method="_on_levels_timer_timeout"]
+[connection signal="timeout" from="AsteroidSpawnTimer" to="." method="_on_asteroid_spawn_timer_timeout"]
