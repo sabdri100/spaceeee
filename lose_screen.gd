@@ -9,8 +9,7 @@ func _on_continue_buton_pressed():
 	if GameState.current_level_scene_path != "":
 		get_tree().change_scene_to_file(GameState.current_level_scene_path)
 	else:
-		print("No level to retry. Defaulting to Level_1.")
-		get_tree().change_scene_to_file("res://Level_1.tscn")
+		get_tree().change_scene_to_file("res://Levels_logic/Level_1.tscn")
 
 
 func _on_exit_button_pressed() -> void:

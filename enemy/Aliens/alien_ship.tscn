@@ -4,16 +4,17 @@
 [ext_resource type="Texture2D" uid="uid://d1gkiaxgb7bp" path="res://art/Alien_Ship.png" id="2_yj62q"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o745u"]
-size = Vector2(534, 327)
+size = Vector2(30, 21)
 
-[node name="AlienShip" type="Area2D"]
+[node name="AlienShip" type="Area2D" groups=["damageable", "enemy"]]
 script = ExtResource("1_stv4k")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.0548493, 0.0564642)
 texture = ExtResource("2_yj62q")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -1.5)
+[node name="HitBox" type="CollisionShape2D" parent="."]
+position = Vector2(0, -0.5)
 shape = SubResource("RectangleShape2D_o745u")
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]

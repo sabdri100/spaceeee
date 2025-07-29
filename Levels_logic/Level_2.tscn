@@ -1,3 +1,43 @@
-[gd_scene load_steps=0 format=3 uid="uid://cp0yuqgu6pcpt"]
+[gd_scene load_steps=6 format=3 uid="uid://cp0yuqgu6pcpt"]
+
+[ext_resource type="Script" uid="uid://cyybqh6biicx2" path="res://Levels_logic/level_2.gd" id="1_yoaji"]
+[ext_resource type="PackedScene" uid="uid://b5dhvhel125t6" path="res://Player/ship.tscn" id="2_haacu"]
+[ext_resource type="PackedScene" uid="uid://pg3cx4mpe6w2" path="res://parallax_background.tscn" id="3_5xo5s"]
+[ext_resource type="FontFile" uid="uid://dxtfpitcxe58o" path="res://art/GrapeSoda.ttf" id="4_p3wii"]
+[ext_resource type="AudioStream" uid="uid://dm6wgcl0evmwu" path="res://audio/music/02 Dodging Obstacles.mp3" id="5_haacu"]
 
 [node name="Level2" type="Node2D"]
+script = ExtResource("1_yoaji")
+
+[node name="ship" parent="." instance=ExtResource("2_haacu")]
+
+[node name="EnemeySpawner" type="Node2D" parent="."]
+
+[node name="AlienSpawnTimer" type="Timer" parent="."]
+
+[node name="LevelTimer" type="Timer" parent="."]
+wait_time = 15.0
+one_shot = true
+autostart = true
+
+[node name="spaceBackground" parent="." instance=ExtResource("3_5xo5s")]
+
+[node name="TimerLabel" type="Label" parent="."]
+offset_left = 121.0
+offset_top = -2.0
+offset_right = 161.0
+offset_bottom = 21.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_p3wii")
+theme_override_font_sizes/font_size = 15
+text = "15.0"
+horizontal_alignment = 1
+
+[node name="Level2Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_haacu")
+autoplay = true
+parameters/looping = false
+
+[connection signal="timeout" from="AlienSpawnTimer" to="." method="_on_alien_spawn_timer_timeout"]
+[connection signal="timeout" from="LevelTimer" to="." method="_on_level_timer_timeout"]

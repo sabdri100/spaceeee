@@ -1,14 +1,27 @@
-[gd_scene load_steps=3 format=3 uid="uid://cx5aw6mg66ttu"]
+[gd_scene load_steps=6 format=3 uid="uid://cx5aw6mg66ttu"]
 
+[ext_resource type="Script" uid="uid://dyar26hxe7iig" path="res://enemy/Aliens/enemy_aliens.gd" id="1_1tye1"]
 [ext_resource type="Texture2D" uid="uid://b3ol0ba8mpf8a" path="res://art/alien2.png" id="1_y1nsl"]
+[ext_resource type="Script" uid="uid://bvapmia3tx4po" path="res://enemy/Aliens/alien_hit_box.gd" id="3_5t03i"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_srs7j"]
-radius = 319.595
+radius = 10.0499
 
-[node name="Enemy Aliens" type="CharacterBody2D"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_ami2y"]
+radius = 9.21954
+
+[node name="Enemy Aliens" type="CharacterBody2D" groups=["damageable", "enemy"]]
+script = ExtResource("1_1tye1")
 
 [node name="Alien_1" type="Sprite2D" parent="."]
+scale = Vector2(0.0341797, 0.0283203)
 texture = ExtResource("1_y1nsl")
 
 [node name="Col_Alien1" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_srs7j")
+
+[node name="Alien_hitBox" type="Area2D" parent="." groups=["damageable"]]
+script = ExtResource("3_5t03i")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Alien_hitBox"]
+shape = SubResource("CircleShape2D_ami2y")

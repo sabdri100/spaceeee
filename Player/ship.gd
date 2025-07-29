@@ -41,7 +41,8 @@ func clamp_position_to_screen_bounds() -> void:
 	position.y = clamp(position.y, half_size.y, screen_size.y - half_size.y)
 
 func _go_to_lose_screen():
-	get_tree().change_scene_to_file("res://lose_screen.tscn")
+	if get_tree():
+		get_tree().call_deferred("change_scene_to_file","res://lose_screen.tscn")
 
 func _on_ship_hit_box_body_entered(body: Node2D) -> void:
 	call_deferred("_go_to_lose_screen")

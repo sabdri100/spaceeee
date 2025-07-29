@@ -41,6 +41,5 @@ func _ready():
 	angular_velocity = randf_range(-2.0,2.0)
 
 func _on_visible_on_screen_notifier_2d_screen_exited():
-	print("asteroide salio de la pantalla")  # quitar
 	queue_free()
 	
