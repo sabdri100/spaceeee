@@ -1,12 +1,13 @@
-[gd_scene load_steps=13 format=3 uid="uid://dn3royrwcuynb"]
+[gd_scene load_steps=14 format=3 uid="uid://dn3royrwcuynb"]
 
-[ext_resource type="Script" uid="uid://8yratt8umen0" path="res://level_3_intro.gd" id="1_oc40q"]
+[ext_resource type="Script" uid="uid://8yratt8umen0" path="res://Intro_Scenes/level_3_intro.gd" id="1_oc40q"]
 [ext_resource type="Texture2D" uid="uid://bedkfmy4q02ys" path="res://art/Untitled 07-23-2025 12-07-23 (1).png" id="2_j6o86"]
 [ext_resource type="Texture2D" uid="uid://cbsew455ofco6" path="res://art/Untitled 07-18-2025 12-49-32.png" id="3_wwe53"]
 [ext_resource type="Texture2D" uid="uid://bpqv4y8n6yaed" path="res://art/Asteroid Brown.png" id="4_n2axr"]
 [ext_resource type="Texture2D" uid="uid://ckpxwh5ixx7oc" path="res://art/Untitled 07-17-2025 11-39-14 (1).png" id="5_82qh2"]
 [ext_resource type="FontFile" uid="uid://dxtfpitcxe58o" path="res://art/GrapeSoda.ttf" id="6_pu0mj"]
 [ext_resource type="Texture2D" uid="uid://blvorfg3ijg05" path="res://art/asteroid_Brown2.png" id="7_pc3pu"]
+[ext_resource type="AudioStream" uid="uid://cfiwon10lq5er" path="res://audio/music/05 LevelIntro.mp3" id="8_7y7mf"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yaehf"]
 texture = ExtResource("2_j6o86")
@@ -162,6 +163,11 @@ theme_override_font_sizes/font_size = 12
 theme_override_styles/hover = SubResource("StyleBoxFlat_2ps0j")
 theme_override_styles/normal = SubResource("StyleBoxFlat_j2edh")
 text = "Continue"
+
+[node name="MusicIntro3" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_7y7mf")
+autoplay = true
+parameters/looping = false
 
 [connection signal="pressed" from="ExitButton" to="." method="_on_exit_button_pressed"]
 [connection signal="pressed" from="ContinueButon" to="." method="_on_continue_buton_pressed"]
