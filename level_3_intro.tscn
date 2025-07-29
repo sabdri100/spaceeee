@@ -1,0 +1,185 @@
+[gd_scene load_steps=15 format=3 uid="uid://xypnjo2wbj70"]
+
+[ext_resource type="Script" path="res://level_3_intro.gd" id="1_oc40q"]
+[ext_resource type="Texture2D" uid="uid://bedkfmy4q02ys" path="res://art/Untitled 07-23-2025 12-07-23 (1).png" id="2_j6o86"]
+[ext_resource type="Texture2D" uid="uid://cbsew455ofco6" path="res://art/Untitled 07-18-2025 12-49-32.png" id="3_wwe53"]
+[ext_resource type="Texture2D" uid="uid://bpqv4y8n6yaed" path="res://art/Asteroid Brown.png" id="4_n2axr"]
+[ext_resource type="Texture2D" uid="uid://ckpxwh5ixx7oc" path="res://art/Untitled 07-17-2025 11-39-14 (1).png" id="5_82qh2"]
+[ext_resource type="FontFile" uid="uid://dxtfpitcxe58o" path="res://art/GrapeSoda.ttf" id="6_pu0mj"]
+[ext_resource type="Texture2D" uid="uid://blvorfg3ijg05" path="res://art/asteroid_Brown2.png" id="7_pc3pu"]
+[ext_resource type="Texture2D" uid="uid://4xiq0pqxo6yh" path="res://art/alien1.png" id="8_wwe53"]
+[ext_resource type="Texture2D" uid="uid://b3ol0ba8mpf8a" path="res://art/alien2.png" id="9_n2axr"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yaehf"]
+texture = ExtResource("2_j6o86")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_074og"]
+bg_color = Color(0.0819648, 0.282661, 0.384163, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cegan"]
+bg_color = Color(0.0819648, 0.282661, 0.384163, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2ps0j"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j2edh"]
+bg_color = Color(0.0819648, 0.282661, 0.384163, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[node name="Level3Intro" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_oc40q")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 122.0
+offset_bottom = 201.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_yaehf")
+
+[node name="Bullet" type="Sprite2D" parent="."]
+position = Vector2(117.621, 114.358)
+rotation = -0.418353
+scale = Vector2(0.317931, 0.412525)
+texture = ExtResource("3_wwe53")
+
+[node name="Bullet2" type="Sprite2D" parent="Bullet"]
+position = Vector2(53.3336, -2.94812)
+texture = ExtResource("3_wwe53")
+
+[node name="Bullet3" type="Sprite2D" parent="Bullet"]
+position = Vector2(-7.0415, -49.1912)
+texture = ExtResource("3_wwe53")
+
+[node name="Bullet4" type="Sprite2D" parent="Bullet"]
+position = Vector2(46.9142, -47.4401)
+texture = ExtResource("3_wwe53")
+
+[node name="Asteroid4" type="Sprite2D" parent="."]
+position = Vector2(61, 212)
+rotation = -0.19939
+scale = Vector2(0.253886, 0.28142)
+texture = ExtResource("4_n2axr")
+
+[node name="Asteroid4" type="Sprite2D" parent="Asteroid4"]
+position = Vector2(418.921, -112.141)
+rotation = -0.42072
+scale = Vector2(0.680349, 0.71312)
+skew = -0.0819287
+texture = ExtResource("4_n2axr")
+
+[node name="Asteroid1" type="Sprite2D" parent="."]
+position = Vector2(29, 83)
+rotation = 0.42258
+scale = Vector2(0.240625, 0.25625)
+texture = ExtResource("4_n2axr")
+
+[node name="ShipImage" type="Sprite2D" parent="."]
+position = Vector2(134.621, 126.358)
+rotation = -0.408704
+scale = Vector2(0.147464, 0.14351)
+texture = ExtResource("5_82qh2")
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 9.0
+offset_right = 158.0
+offset_bottom = 44.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_pu0mj")
+theme_override_font_sizes/font_size = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_074og")
+text = "          Level 3: 
+Dodge The Asteroids, 
+AND THE ALIENS"
+vertical_alignment = 1
+uppercase = true
+
+[node name="Asteroid2" type="Sprite2D" parent="."]
+position = Vector2(124, 13)
+rotation = 0.492797
+scale = Vector2(0.0516707, 0.0553297)
+texture = ExtResource("7_pc3pu")
+
+[node name="Instrucctions" type="Label" parent="."]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 98.0
+offset_right = 86.0
+offset_bottom = 152.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_pu0mj")
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxFlat_cegan")
+text = "CONGRATULATIONS
+ON TO LEVEL 3!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Asteroid3" type="Sprite2D" parent="."]
+position = Vector2(9.00002, 157)
+rotation = 0.42258
+scale = Vector2(0.0683094, 0.0701067)
+texture = ExtResource("7_pc3pu")
+
+[node name="ExitButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 112.0
+offset_top = 209.0
+offset_right = 155.0
+offset_bottom = 228.0
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("6_pu0mj")
+theme_override_font_sizes/font_size = 12
+theme_override_styles/hover = SubResource("StyleBoxFlat_2ps0j")
+theme_override_styles/normal = SubResource("StyleBoxFlat_j2edh")
+text = "Exit"
+
+[node name="ContinueButon" type="Button" parent="."]
+layout_mode = 0
+offset_left = 112.0
+offset_top = 185.0
+offset_right = 155.0
+offset_bottom = 204.0
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("6_pu0mj")
+theme_override_font_sizes/font_size = 12
+theme_override_styles/hover = SubResource("StyleBoxFlat_2ps0j")
+theme_override_styles/normal = SubResource("StyleBoxFlat_j2edh")
+text = "Continue"
+
+[node name="Aliens" type="Sprite2D" parent="."]
+position = Vector2(130, 16)
+scale = Vector2(0.0761719, 0.0791015)
+texture = ExtResource("8_wwe53")
+
+[node name="Alien1" type="Sprite2D" parent="Aliens"]
+position = Vector2(-485.743, 1706.67)
+scale = Vector2(0.772727, 0.733333)
+texture = ExtResource("9_n2axr")
+
+[node name="Alien2" type="Sprite2D" parent="Aliens"]
+position = Vector2(-249.436, 695.309)
+scale = Vector2(0.783799, 0.733333)
+texture = ExtResource("9_n2axr")
+
+[connection signal="pressed" from="ExitButton" to="." method="_on_exit_button_pressed"]
+[connection signal="pressed" from="ContinueButon" to="." method="_on_continue_buton_pressed"]
