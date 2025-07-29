@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://bgk53sbfgsjgh"]
+[gd_scene load_steps=14 format=3 uid="uid://ciaxiwsjokc1o"]
 
 [ext_resource type="Script" uid="uid://dn2kevqt1iyt7" path="res://win_screen.gd" id="1_5hoe6"]
 [ext_resource type="Texture2D" uid="uid://bedkfmy4q02ys" path="res://art/Untitled 07-23-2025 12-07-23 (1).png" id="2_g6jvr"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://ckpxwh5ixx7oc" path="res://art/Untitled 07-17-2025 11-39-14 (1).png" id="5_7t713"]
 [ext_resource type="FontFile" uid="uid://dxtfpitcxe58o" path="res://art/GrapeSoda.ttf" id="6_l471v"]
 [ext_resource type="Texture2D" uid="uid://blvorfg3ijg05" path="res://art/asteroid_Brown2.png" id="7_idp7t"]
+[ext_resource type="AudioStream" uid="uid://b337p3vpfuk6w" path="res://audio/music/04 Victory.mp3" id="8_g6jvr"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_y0ktu"]
 texture = ExtResource("2_g6jvr")
@@ -165,6 +166,11 @@ theme_override_font_sizes/font_size = 12
 theme_override_styles/hover = SubResource("StyleBoxFlat_fj7kq")
 theme_override_styles/normal = SubResource("StyleBoxFlat_6iptg")
 text = "Restart "
+
+[node name="VictoryMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_g6jvr")
+autoplay = true
+parameters/looping = false
 
 [connection signal="pressed" from="ExitButton" to="." method="_on_exit_button_pressed"]
 [connection signal="pressed" from="ContinueButon" to="." method="_on_continue_buton_pressed"]

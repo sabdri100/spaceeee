@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cfiwon10lq5er"
+path="res://.godot/imported/05 LevelIntro.mp3-69c9b8fb4c138d907be09614705b1727.mp3str"
+
+[deps]
+
+source_file="res://audio/music/05 LevelIntro.mp3"
+dest_files=["res://.godot/imported/05 LevelIntro.mp3-69c9b8fb4c138d907be09614705b1727.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
