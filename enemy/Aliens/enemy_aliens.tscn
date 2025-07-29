@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://cx5aw6mg66ttu"]
+
+[ext_resource type="Texture2D" uid="uid://b3ol0ba8mpf8a" path="res://art/alien2.png" id="1_y1nsl"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_srs7j"]
+radius = 319.595
+
+[node name="Enemy Aliens" type="CharacterBody2D"]
+
+[node name="Alien_1" type="Sprite2D" parent="."]
+texture = ExtResource("1_y1nsl")
+
+[node name="Col_Alien1" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_srs7j")

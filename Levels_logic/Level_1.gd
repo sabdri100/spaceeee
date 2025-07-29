@@ -4,14 +4,20 @@ extends Node2D
 @onready var levels_timer = $LevelsTimer
 @onready var asteroid_timer = $AsteroidSpawnTimer
 @onready var level_intro = $LevelIntro
+@onready var timer_lable = $TimerLable  # hice esto
 
-var asteroid_scene = preload("res://enemy/enemy_asteroid.tscn")
+var asteroid_scene = preload("res://enemy/Asteroids/enemy_asteroid.tscn")
 var curr_level = 1
 
 func _ready():
 	# Maneja los asteroid (Nivel 1)
-	#levels_timer.start()
+	levels_timer.start() # hice esto
 	asteroid_timer.start()
+	timer_lable.text = str(levels_timer.wait_time) # hice esto
+
+func _process(delta: float) -> void:  # hice esto
+	var time_left = max(0.0, levels_timer.time_left)
+	timer_lable.text = str(time_left).pad_decimals(1)
 
 func spawn_asteroid_from_edge():
 	var asteroid = asteroid_scene.instantiate()
@@ -39,5 +45,4 @@ func _on_asteroid_spawn_timer_timeout():
 
 func _on_levels_timer_timeout() -> void:
 	asteroid_timer.stop()
-	print("Nivel Completado!")   # quitar
-	get_tree().change_scene_to_file("res://level_2_intro.tscn")
+	get_tree().change_scene_to_file("res://Intro_Scenes/level_2_intro.tscn")
