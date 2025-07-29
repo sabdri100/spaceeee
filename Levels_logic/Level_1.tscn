@@ -1,10 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://71t16126a4j2"]
+[gd_scene load_steps=6 format=3 uid="uid://71t16126a4j2"]
 
 [ext_resource type="Script" uid="uid://cysaoo2e525ej" path="res://Levels_logic/Level_1.gd" id="1_65pcf"]
 [ext_resource type="PackedScene" uid="uid://b5dhvhel125t6" path="res://Player/ship.tscn" id="2_a0j4s"]
 [ext_resource type="PackedScene" uid="uid://pg3cx4mpe6w2" path="res://parallax_background.tscn" id="3_jikk4"]
-[ext_resource type="AudioStream" uid="uid://dm6wgcl0evmwu" path="res://audio/music/02 Dodging Obstacles.mp3" id="4_a0j4s"]
 [ext_resource type="FontFile" uid="uid://dxtfpitcxe58o" path="res://art/GrapeSoda.ttf" id="4_0tv8b"]
+[ext_resource type="AudioStream" uid="uid://dm6wgcl0evmwu" path="res://audio/music/02 Dodging Obstacles.mp3" id="4_a0j4s"]
 
 [node name="Level_1" type="Node2D"]
 script = ExtResource("1_65pcf")
@@ -27,6 +27,7 @@ autostart = true
 stream = ExtResource("4_a0j4s")
 autoplay = true
 parameters/looping = false
+
 [node name="TimerLable" type="Label" parent="."]
 offset_left = 121.0
 offset_top = -2.0
