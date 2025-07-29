@@ -1,12 +1,13 @@
-[gd_scene load_steps=14 format=3 uid="uid://ddq0jewsk8wvd"]
+[gd_scene load_steps=15 format=3 uid="uid://ddq0jewsk8wvd"]
 
 [ext_resource type="Script" uid="uid://cy1ufk051xqiw" path="res://Intro_Scenes/level_2_intro.gd" id="1_i0klq"]
 [ext_resource type="Texture2D" uid="uid://bedkfmy4q02ys" path="res://art/Untitled 07-23-2025 12-07-23 (1).png" id="2_ih06o"]
 [ext_resource type="Texture2D" uid="uid://cbsew455ofco6" path="res://art/Untitled 07-18-2025 12-49-32.png" id="3_358f2"]
-[ext_resource type="Texture2D" uid="uid://bpqv4y8n6yaed" path="res://art/Asteroid Brown.png" id="4_8lgog"]
+[ext_resource type="Texture2D" uid="uid://4xiq0pqxo6yh" path="res://art/alien1.png" id="4_gy1n1"]
+[ext_resource type="Texture2D" uid="uid://b3ol0ba8mpf8a" path="res://art/alien2.png" id="5_cpuav"]
 [ext_resource type="Texture2D" uid="uid://ckpxwh5ixx7oc" path="res://art/Untitled 07-17-2025 11-39-14 (1).png" id="5_xnnyi"]
 [ext_resource type="FontFile" uid="uid://dxtfpitcxe58o" path="res://art/GrapeSoda.ttf" id="6_xobc4"]
-[ext_resource type="Texture2D" uid="uid://blvorfg3ijg05" path="res://art/asteroid_Brown2.png" id="7_m2scy"]
+[ext_resource type="Texture2D" uid="uid://d1gkiaxgb7bp" path="res://art/Alien_Ship.png" id="8_1quqx"]
 [ext_resource type="AudioStream" uid="uid://cfiwon10lq5er" path="res://audio/music/05 LevelIntro.mp3" id="8_rx1ab"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yaehf"]
@@ -71,24 +72,24 @@ texture = ExtResource("3_358f2")
 position = Vector2(46.9142, -47.4401)
 texture = ExtResource("3_358f2")
 
-[node name="Asteroid4" type="Sprite2D" parent="."]
-position = Vector2(31, 212)
+[node name="Alien4" type="Sprite2D" parent="."]
+position = Vector2(36, 197)
 rotation = -0.19939
-scale = Vector2(0.253886, 0.28142)
-texture = ExtResource("4_8lgog")
+scale = Vector2(0.0952075, 0.0949533)
+texture = ExtResource("4_gy1n1")
 
-[node name="Asteroid4" type="Sprite2D" parent="Asteroid4"]
-position = Vector2(118.584, -529.417)
+[node name="Alien4" type="Sprite2D" parent="Alien4"]
+position = Vector2(75.2211, -1341.5)
 rotation = -0.42072
-scale = Vector2(0.680349, 0.71312)
+scale = Vector2(0.579153, 0.626262)
 skew = -0.0819287
-texture = ExtResource("4_8lgog")
+texture = ExtResource("5_cpuav")
 
-[node name="Asteroid1" type="Sprite2D" parent="."]
-position = Vector2(112, 64)
+[node name="Alien 1" type="Sprite2D" parent="."]
+position = Vector2(106.526, 78.1049)
 rotation = 0.42258
-scale = Vector2(0.240625, 0.25625)
-texture = ExtResource("4_8lgog")
+scale = Vector2(0.0786007, 0.0763108)
+texture = ExtResource("4_gy1n1")
 
 [node name="ShipImage" type="Sprite2D" parent="."]
 position = Vector2(134.621, 126.358)
@@ -107,15 +108,15 @@ theme_override_fonts/font = ExtResource("6_xobc4")
 theme_override_font_sizes/font_size = 0
 theme_override_styles/normal = SubResource("StyleBoxFlat_074og")
 text = "          Level 2: 
- Dodge The Asteroids"
+ Shoot The Aliens"
 vertical_alignment = 1
 uppercase = true
 
-[node name="Asteroid2" type="Sprite2D" parent="."]
+[node name="Alien2" type="Sprite2D" parent="."]
 position = Vector2(124, 13)
 rotation = 0.492797
 scale = Vector2(0.0516707, 0.0553297)
-texture = ExtResource("7_m2scy")
+texture = ExtResource("5_cpuav")
 
 [node name="Instrucctions" type="Label" parent="."]
 layout_mode = 0
@@ -132,11 +133,11 @@ ON TO LEVEL 2!"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Asteroid3" type="Sprite2D" parent="."]
+[node name="Alien3" type="Sprite2D" parent="."]
 position = Vector2(92.8861, 161.368)
 rotation = 0.42258
 scale = Vector2(0.0683094, 0.0701067)
-texture = ExtResource("7_m2scy")
+texture = ExtResource("8_1quqx")
 
 [node name="ExitButton" type="Button" parent="."]
 layout_mode = 0
