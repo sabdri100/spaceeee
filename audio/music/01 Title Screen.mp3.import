@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://3kt0epvq4te"
+path="res://.godot/imported/01 Title Screen.mp3-4c879aa5258306aa088d482726fea36e.mp3str"
+
+[deps]
+
+source_file="res://audio/music/01 Title Screen.mp3"
+dest_files=["res://.godot/imported/01 Title Screen.mp3-4c879aa5258306aa088d482726fea36e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
