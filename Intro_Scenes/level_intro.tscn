@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=3 uid="uid://bttk45acqwwn3"]
 
-[ext_resource type="Script" uid="uid://1jbq3mao2a3i" path="res://level_intro.gd" id="1_2ps0j"]
+[ext_resource type="Script" path="res://Intro_Scenes/level_intro.gd" id="1_2ps0j"]
 [ext_resource type="Texture2D" uid="uid://bedkfmy4q02ys" path="res://art/Untitled 07-23-2025 12-07-23 (1).png" id="2_j2edh"]
 [ext_resource type="Texture2D" uid="uid://cbsew455ofco6" path="res://art/Untitled 07-18-2025 12-49-32.png" id="3_54sm7"]
 [ext_resource type="Texture2D" uid="uid://bpqv4y8n6yaed" path="res://art/Asteroid Brown.png" id="4_oc03k"]
