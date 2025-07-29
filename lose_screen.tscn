@@ -163,7 +163,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_2ps0j")
 theme_override_styles/normal = SubResource("StyleBoxFlat_j2edh")
 text = "Retry"
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="GameOverMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_pmgax")
 autoplay = true
 
