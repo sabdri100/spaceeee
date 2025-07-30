@@ -1,17 +1,19 @@
-[gd_scene load_steps=15 format=3 uid="uid://ddq0jewsk8wvd"]
+[gd_scene load_steps=17 format=3 uid="uid://d0xo622c62vnn"]
 
-[ext_resource type="Script" uid="uid://cy1ufk051xqiw" path="res://Intro_Scenes/level_2_intro.gd" id="1_i0klq"]
-[ext_resource type="Texture2D" uid="uid://bedkfmy4q02ys" path="res://art/Untitled 07-23-2025 12-07-23 (1).png" id="2_ih06o"]
-[ext_resource type="Texture2D" uid="uid://cbsew455ofco6" path="res://art/Untitled 07-18-2025 12-49-32.png" id="3_358f2"]
-[ext_resource type="Texture2D" uid="uid://4xiq0pqxo6yh" path="res://art/alien1.png" id="4_gy1n1"]
-[ext_resource type="Texture2D" uid="uid://b3ol0ba8mpf8a" path="res://art/alien2.png" id="5_cpuav"]
-[ext_resource type="Texture2D" uid="uid://ckpxwh5ixx7oc" path="res://art/Untitled 07-17-2025 11-39-14 (1).png" id="5_xnnyi"]
-[ext_resource type="FontFile" uid="uid://dxtfpitcxe58o" path="res://art/GrapeSoda.ttf" id="6_xobc4"]
-[ext_resource type="Texture2D" uid="uid://d1gkiaxgb7bp" path="res://art/Alien_Ship.png" id="8_1quqx"]
-[ext_resource type="AudioStream" uid="uid://cfiwon10lq5er" path="res://audio/music/05 LevelIntro.mp3" id="8_rx1ab"]
+[ext_resource type="Script" uid="uid://5mhq51h6i6eh" path="res://lose_screens/lose_screen.gd" id="1_3eg1d"]
+[ext_resource type="Texture2D" uid="uid://bedkfmy4q02ys" path="res://art/Untitled 07-23-2025 12-07-23 (1).png" id="2_182te"]
+[ext_resource type="Texture2D" uid="uid://cbsew455ofco6" path="res://art/Untitled 07-18-2025 12-49-32.png" id="3_b2j7q"]
+[ext_resource type="Texture2D" uid="uid://4xiq0pqxo6yh" path="res://art/alien1.png" id="4_mcxfx"]
+[ext_resource type="Texture2D" uid="uid://b3ol0ba8mpf8a" path="res://art/alien2.png" id="5_ifx7i"]
+[ext_resource type="Texture2D" uid="uid://bpqv4y8n6yaed" path="res://art/Asteroid Brown.png" id="6_cyf5o"]
+[ext_resource type="Texture2D" uid="uid://ckpxwh5ixx7oc" path="res://art/Untitled 07-17-2025 11-39-14 (1).png" id="7_b2hmy"]
+[ext_resource type="FontFile" uid="uid://dxtfpitcxe58o" path="res://art/GrapeSoda.ttf" id="8_bbdbm"]
+[ext_resource type="Texture2D" uid="uid://blvorfg3ijg05" path="res://art/asteroid_Brown2.png" id="9_so74p"]
+[ext_resource type="Texture2D" uid="uid://d1gkiaxgb7bp" path="res://art/Alien_Ship.png" id="10_8avkb"]
+[ext_resource type="AudioStream" uid="uid://befpkcnh73b4b" path="res://audio/music/03 Game Over.mp3" id="11_mmbib"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yaehf"]
-texture = ExtResource("2_ih06o")
+texture = ExtResource("2_182te")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_074og"]
 bg_color = Color(0.0819648, 0.282661, 0.384163, 1)
@@ -36,12 +38,12 @@ corner_radius_top_right = 4
 corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
 
-[node name="Level2Intro" type="Control"]
+[node name="Lose_screen_2" type="Control"]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
-script = ExtResource("1_i0klq")
+script = ExtResource("1_3eg1d")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
@@ -58,59 +60,72 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_yaehf")
 position = Vector2(117.621, 114.358)
 rotation = -0.418353
 scale = Vector2(0.317931, 0.412525)
-texture = ExtResource("3_358f2")
+texture = ExtResource("3_b2j7q")
 
 [node name="Bullet2" type="Sprite2D" parent="Bullet"]
 position = Vector2(53.3336, -2.94812)
-texture = ExtResource("3_358f2")
+texture = ExtResource("3_b2j7q")
 
 [node name="Bullet3" type="Sprite2D" parent="Bullet"]
 position = Vector2(-7.0415, -49.1912)
-texture = ExtResource("3_358f2")
+texture = ExtResource("3_b2j7q")
 
 [node name="Bullet4" type="Sprite2D" parent="Bullet"]
 position = Vector2(46.9142, -47.4401)
-texture = ExtResource("3_358f2")
+texture = ExtResource("3_b2j7q")
 
 [node name="Alien4" type="Sprite2D" parent="."]
-position = Vector2(36, 197)
-rotation = -0.19939
-scale = Vector2(0.0952075, 0.0949533)
-texture = ExtResource("4_gy1n1")
+position = Vector2(30, 204)
+rotation = -0.419743
+scale = Vector2(0.116933, 0.117524)
+skew = 0.040029
+texture = ExtResource("4_mcxfx")
 
 [node name="Alien2" type="Sprite2D" parent="Alien4"]
 position = Vector2(1288.78, -1715.84)
 rotation = 0.693501
 scale = Vector2(0.543309, 0.582071)
 skew = -0.00262761
-texture = ExtResource("5_cpuav")
+texture = ExtResource("5_ifx7i")
 
 [node name="Alien 1" type="Sprite2D" parent="Alien4"]
-position = Vector2(973.436, -1080.22)
+position = Vector2(1014.97, -720.397)
 rotation = 0.623237
-scale = Vector2(0.826323, 0.802939)
+scale = Vector2(0.817907, 0.76381)
 skew = -0.00253224
-texture = ExtResource("4_gy1n1")
-
-[node name="Alien3" type="Sprite2D" parent="Alien4"]
-position = Vector2(659.787, -249.16)
-rotation = 0.623237
-scale = Vector2(0.718132, 0.73766)
-skew = -0.00253236
-texture = ExtResource("8_1quqx")
+texture = ExtResource("4_mcxfx")
 
 [node name="Alien4" type="Sprite2D" parent="Alien4"]
-position = Vector2(75.2211, -1341.5)
-rotation = -0.42072
-scale = Vector2(0.579153, 0.626262)
+position = Vector2(266.382, -959.144)
+rotation = 0.401426
+scale = Vector2(0.418113, 0.427651)
 skew = -0.0819287
-texture = ExtResource("5_cpuav")
+texture = ExtResource("5_ifx7i")
+
+[node name="Asteroid4" type="Sprite2D" parent="."]
+position = Vector2(12, 156)
+rotation = -0.19939
+scale = Vector2(0.253886, 0.28142)
+texture = ExtResource("6_cyf5o")
+
+[node name="Asteroid4" type="Sprite2D" parent="Asteroid4"]
+position = Vector2(625.92, -103.406)
+rotation = -0.42072
+scale = Vector2(0.680349, 0.71312)
+skew = -0.0819287
+texture = ExtResource("6_cyf5o")
+
+[node name="Asteroid1" type="Sprite2D" parent="."]
+position = Vector2(13, 40)
+rotation = 0.42258
+scale = Vector2(0.240625, 0.25625)
+texture = ExtResource("6_cyf5o")
 
 [node name="ShipImage" type="Sprite2D" parent="."]
 position = Vector2(134.621, 126.358)
 rotation = -0.408704
 scale = Vector2(0.147464, 0.14351)
-texture = ExtResource("5_xnnyi")
+texture = ExtResource("7_b2hmy")
 
 [node name="Title" type="Label" parent="."]
 layout_mode = 0
@@ -119,28 +134,46 @@ offset_top = 9.0
 offset_right = 158.0
 offset_bottom = 44.0
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("6_xobc4")
+theme_override_fonts/font = ExtResource("8_bbdbm")
 theme_override_font_sizes/font_size = 0
 theme_override_styles/normal = SubResource("StyleBoxFlat_074og")
-text = "          Level 2: 
- Shoot The Aliens"
+text = "        YOU LOST!"
 vertical_alignment = 1
 uppercase = true
 
+[node name="Asteroid2" type="Sprite2D" parent="."]
+position = Vector2(124, 13)
+rotation = 0.492797
+scale = Vector2(0.0516707, 0.0553297)
+texture = ExtResource("9_so74p")
+
 [node name="Instrucctions" type="Label" parent="."]
 layout_mode = 0
-offset_left = 5.0
-offset_top = 98.0
-offset_right = 86.0
-offset_bottom = 152.0
+offset_left = -3.0
+offset_top = 101.0
+offset_right = 108.0
+offset_bottom = 155.0
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("6_xobc4")
+theme_override_fonts/font = ExtResource("8_bbdbm")
 theme_override_font_sizes/font_size = 12
 theme_override_styles/normal = SubResource("StyleBoxFlat_cegan")
-text = "CONGRATULATIONS
-ON TO LEVEL 2!"
+text = "WOMP WOMP
+Better Luck Next Time!"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Alien3" type="Sprite2D" parent="."]
+position = Vector2(105, 162)
+rotation = 0.21949
+scale = Vector2(0.082505, 0.0881665)
+skew = 0.00554585
+texture = ExtResource("10_8avkb")
+
+[node name="Asteroid3" type="Sprite2D" parent="."]
+position = Vector2(114, 228)
+rotation = 0.42258
+scale = Vector2(0.0683094, 0.0701067)
+texture = ExtResource("9_so74p")
 
 [node name="ExitButton" type="Button" parent="."]
 layout_mode = 0
@@ -149,7 +182,7 @@ offset_top = 209.0
 offset_right = 155.0
 offset_bottom = 228.0
 theme_override_constants/outline_size = 2
-theme_override_fonts/font = ExtResource("6_xobc4")
+theme_override_fonts/font = ExtResource("8_bbdbm")
 theme_override_font_sizes/font_size = 12
 theme_override_styles/hover = SubResource("StyleBoxFlat_2ps0j")
 theme_override_styles/normal = SubResource("StyleBoxFlat_j2edh")
@@ -162,16 +195,15 @@ offset_top = 185.0
 offset_right = 155.0
 offset_bottom = 204.0
 theme_override_constants/outline_size = 2
-theme_override_fonts/font = ExtResource("6_xobc4")
+theme_override_fonts/font = ExtResource("8_bbdbm")
 theme_override_font_sizes/font_size = 12
 theme_override_styles/hover = SubResource("StyleBoxFlat_2ps0j")
 theme_override_styles/normal = SubResource("StyleBoxFlat_j2edh")
-text = "Continue"
+text = "Retry"
 
-[node name="MusicIntro2" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("8_rx1ab")
+[node name="GameOverMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_mmbib")
 autoplay = true
-parameters/looping = false
 
 [connection signal="pressed" from="ExitButton" to="." method="_on_exit_button_pressed"]
 [connection signal="pressed" from="ContinueButon" to="." method="_on_continue_buton_pressed"]

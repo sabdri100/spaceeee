@@ -75,30 +75,11 @@ texture = ExtResource("3_4kgk1")
 position = Vector2(46.9142, -47.4401)
 texture = ExtResource("3_4kgk1")
 
-[node name="Alien4" type="Sprite2D" parent="."]
-position = Vector2(17.0543, 204.595)
-rotation = -0.19939
-scale = Vector2(0.117018, 0.115636)
-texture = ExtResource("4_7t713")
-
-[node name="Asteroid4" type="Sprite2D" parent="Alien4"]
-position = Vector2(154.228, -1068.13)
-rotation = -0.42072
-scale = Vector2(1.62741, 1.95266)
-skew = -0.0819287
-texture = ExtResource("4_ufkpf")
-
 [node name="Alien1" type="Sprite2D" parent="."]
 position = Vector2(116.706, 83.3827)
 rotation = 0.42258
 scale = Vector2(0.101856, 0.0980435)
 texture = ExtResource("6_idp7t")
-
-[node name="Alien2" type="Sprite2D" parent="."]
-position = Vector2(155, 181)
-rotation = 0.42258
-scale = Vector2(0.109386, 0.101902)
-texture = ExtResource("7_7t713")
 
 [node name="ShipImage" type="Sprite2D" parent="."]
 position = Vector2(134.621, 126.358)
@@ -147,10 +128,16 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Asteroid3" type="Sprite2D" parent="."]
-position = Vector2(92.8861, 161.368)
+position = Vector2(81, 219)
 rotation = 0.42258
 scale = Vector2(0.0683094, 0.0701067)
 texture = ExtResource("7_idp7t")
+
+[node name="Alien2" type="Sprite2D" parent="."]
+position = Vector2(144, 173)
+rotation = 0.42258
+scale = Vector2(0.109386, 0.101902)
+texture = ExtResource("7_7t713")
 
 [node name="ExitButton" type="Button" parent="."]
 layout_mode = 0
@@ -164,6 +151,19 @@ theme_override_font_sizes/font_size = 12
 theme_override_styles/hover = SubResource("StyleBoxFlat_fj7kq")
 theme_override_styles/normal = SubResource("StyleBoxFlat_6iptg")
 text = "Exit"
+
+[node name="Alien4" type="Sprite2D" parent="ExitButton"]
+position = Vector2(-94.9457, -4.40472)
+rotation = -0.19939
+scale = Vector2(0.117018, 0.115636)
+texture = ExtResource("4_7t713")
+
+[node name="Asteroid4" type="Sprite2D" parent="ExitButton/Alien4"]
+position = Vector2(154.228, -1068.13)
+rotation = -0.42072
+scale = Vector2(1.62741, 1.95266)
+skew = -0.0819287
+texture = ExtResource("4_ufkpf")
 
 [node name="ContinueButon" type="Button" parent="."]
 layout_mode = 0
