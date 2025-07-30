@@ -45,4 +45,12 @@ func _go_to_lose_screen():
 		get_tree().call_deferred("change_scene_to_file","res://lose_screen.tscn")
 
 func _on_ship_hit_box_body_entered(body: Node2D) -> void:
-	call_deferred("_go_to_lose_screen")
+	if GameState.current_level_scene_path == "res://Levels_logic/Level_2.tscn":
+		get_tree().change_scene_to_file("res://lose_screens/lose_screen_2.tscn")
+	if GameState.current_level_scene_path == "res://Levels_logic/Level_1.tscn":
+		get_tree().change_scene_to_file("res://lose_screens/lose_screen.tscn")
+	else:
+		get_tree().change_scene_to_file("res://lose_screens/lose_screen_3.tscn")
+	#get_tree().call_deferred("change_scene_to_file", "res://lose_screen.tscn")
+	#call_deferred("_go_to_lose_screen")
+	

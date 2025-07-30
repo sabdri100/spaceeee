@@ -1,11 +1,14 @@
-[gd_scene load_steps=14 format=3 uid="uid://ciaxiwsjokc1o"]
+[gd_scene load_steps=17 format=3 uid="uid://bgk53sbfgsjgh"]
 
 [ext_resource type="Script" uid="uid://dn2kevqt1iyt7" path="res://win_screen.gd" id="1_5hoe6"]
 [ext_resource type="Texture2D" uid="uid://bedkfmy4q02ys" path="res://art/Untitled 07-23-2025 12-07-23 (1).png" id="2_g6jvr"]
 [ext_resource type="Texture2D" uid="uid://cbsew455ofco6" path="res://art/Untitled 07-18-2025 12-49-32.png" id="3_4kgk1"]
+[ext_resource type="Texture2D" uid="uid://4xiq0pqxo6yh" path="res://art/alien1.png" id="4_7t713"]
 [ext_resource type="Texture2D" uid="uid://bpqv4y8n6yaed" path="res://art/Asteroid Brown.png" id="4_ufkpf"]
 [ext_resource type="Texture2D" uid="uid://ckpxwh5ixx7oc" path="res://art/Untitled 07-17-2025 11-39-14 (1).png" id="5_7t713"]
+[ext_resource type="Texture2D" uid="uid://b3ol0ba8mpf8a" path="res://art/alien2.png" id="6_idp7t"]
 [ext_resource type="FontFile" uid="uid://dxtfpitcxe58o" path="res://art/GrapeSoda.ttf" id="6_l471v"]
+[ext_resource type="Texture2D" uid="uid://d1gkiaxgb7bp" path="res://art/Alien_Ship.png" id="7_7t713"]
 [ext_resource type="Texture2D" uid="uid://blvorfg3ijg05" path="res://art/asteroid_Brown2.png" id="7_idp7t"]
 [ext_resource type="AudioStream" uid="uid://b337p3vpfuk6w" path="res://audio/music/04 Victory.mp3" id="8_g6jvr"]
 
@@ -41,6 +44,7 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("1_5hoe6")
+metadata/_edit_horizontal_guides_ = [-30.0]
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
@@ -71,24 +75,11 @@ texture = ExtResource("3_4kgk1")
 position = Vector2(46.9142, -47.4401)
 texture = ExtResource("3_4kgk1")
 
-[node name="Asteroid4" type="Sprite2D" parent="."]
-position = Vector2(31, 212)
-rotation = -0.19939
-scale = Vector2(0.253886, 0.28142)
-texture = ExtResource("4_ufkpf")
-
-[node name="Asteroid4" type="Sprite2D" parent="Asteroid4"]
-position = Vector2(118.584, -529.417)
-rotation = -0.42072
-scale = Vector2(0.680349, 0.71312)
-skew = -0.0819287
-texture = ExtResource("4_ufkpf")
-
-[node name="Asteroid1" type="Sprite2D" parent="."]
-position = Vector2(112, 64)
+[node name="Alien1" type="Sprite2D" parent="."]
+position = Vector2(116.706, 83.3827)
 rotation = 0.42258
-scale = Vector2(0.240625, 0.25625)
-texture = ExtResource("4_ufkpf")
+scale = Vector2(0.101856, 0.0980435)
+texture = ExtResource("6_idp7t")
 
 [node name="ShipImage" type="Sprite2D" parent="."]
 position = Vector2(134.621, 126.358)
@@ -118,11 +109,12 @@ scale = Vector2(0.0516707, 0.0553297)
 texture = ExtResource("7_idp7t")
 
 [node name="Instrucctions" type="Label" parent="."]
+light_mask = 5
 layout_mode = 0
 offset_left = 5.0
-offset_top = 98.0
-offset_right = 86.0
-offset_bottom = 152.0
+offset_top = 99.0
+offset_right = 146.0
+offset_bottom = 171.0
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("6_l471v")
 theme_override_font_sizes/font_size = 12
@@ -136,10 +128,16 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Asteroid3" type="Sprite2D" parent="."]
-position = Vector2(92.8861, 161.368)
+position = Vector2(81, 219)
 rotation = 0.42258
 scale = Vector2(0.0683094, 0.0701067)
 texture = ExtResource("7_idp7t")
+
+[node name="Alien2" type="Sprite2D" parent="."]
+position = Vector2(144, 173)
+rotation = 0.42258
+scale = Vector2(0.109386, 0.101902)
+texture = ExtResource("7_7t713")
 
 [node name="ExitButton" type="Button" parent="."]
 layout_mode = 0
@@ -153,6 +151,19 @@ theme_override_font_sizes/font_size = 12
 theme_override_styles/hover = SubResource("StyleBoxFlat_fj7kq")
 theme_override_styles/normal = SubResource("StyleBoxFlat_6iptg")
 text = "Exit"
+
+[node name="Alien4" type="Sprite2D" parent="ExitButton"]
+position = Vector2(-94.9457, -4.40472)
+rotation = -0.19939
+scale = Vector2(0.117018, 0.115636)
+texture = ExtResource("4_7t713")
+
+[node name="Asteroid4" type="Sprite2D" parent="ExitButton/Alien4"]
+position = Vector2(154.228, -1068.13)
+rotation = -0.42072
+scale = Vector2(1.62741, 1.95266)
+skew = -0.0819287
+texture = ExtResource("4_ufkpf")
 
 [node name="ContinueButon" type="Button" parent="."]
 layout_mode = 0
