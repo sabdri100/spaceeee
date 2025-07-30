@@ -1,0 +1,44 @@
+[gd_scene load_steps=6 format=3 uid="uid://bknoeb8yfejnl"]
+
+[ext_resource type="Script" uid="uid://dcaham560r3tf" path="res://Levels_logic/Level_3.gd" id="1_pr2o2"]
+[ext_resource type="PackedScene" uid="uid://b5dhvhel125t6" path="res://Player/ship.tscn" id="2_cyc04"]
+[ext_resource type="PackedScene" uid="uid://pg3cx4mpe6w2" path="res://parallax_background.tscn" id="3_ufpq0"]
+[ext_resource type="FontFile" uid="uid://dxtfpitcxe58o" path="res://art/GrapeSoda.ttf" id="4_ybhn8"]
+[ext_resource type="AudioStream" uid="uid://crm0yhdjq353l" path="res://audio/music/06 Final Level.mp3" id="5_cyc04"]
+
+[node name="Level3" type="Node2D"]
+script = ExtResource("1_pr2o2")
+
+[node name="ship" parent="." instance=ExtResource("2_cyc04")]
+
+[node name="EnemySpawner" type="Node2D" parent="."]
+
+[node name="AsteroidSpawnTimer" type="Timer" parent="."]
+wait_time = 0.5
+autostart = true
+
+[node name="AlienSpawnTimer" type="Timer" parent="."]
+
+[node name="LevelTimer" type="Timer" parent="."]
+wait_time = 15.0
+one_shot = true
+autostart = true
+
+[node name="spaceBackground" parent="." instance=ExtResource("3_ufpq0")]
+
+[node name="TimerLabel" type="Label" parent="."]
+offset_left = 121.0
+offset_top = -2.0
+offset_right = 161.0
+offset_bottom = 21.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_ybhn8")
+theme_override_font_sizes/font_size = 15
+text = "15.0"
+horizontal_alignment = 1
+
+[node name="Level3Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_cyc04")
+autoplay = true
+parameters/looping = false

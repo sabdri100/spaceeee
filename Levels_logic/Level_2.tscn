@@ -11,7 +11,7 @@ script = ExtResource("1_yoaji")
 
 [node name="ship" parent="." instance=ExtResource("2_haacu")]
 
-[node name="EnemeySpawner" type="Node2D" parent="."]
+[node name="EnemySpawner" type="Node2D" parent="."]
 
 [node name="AlienSpawnTimer" type="Timer" parent="."]
 
