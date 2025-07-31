@@ -12,6 +12,7 @@ func _process(_delta: float) -> void:
 
 func _on_start_pressed() :
 	self.visible = false  
+	GameState.current_level_scene_path = "res://Levels_logic/Level_1.tscn"
 	get_tree().change_scene_to_file("res://Intro_Scenes/level_intro.tscn")
 
 
