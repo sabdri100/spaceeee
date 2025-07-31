@@ -20,7 +20,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_24fn8"]
-radius = 8.0
+radius = 5.0
 
 [node name="ship" type="Node2D"]
 position = Vector2(-1, 6)

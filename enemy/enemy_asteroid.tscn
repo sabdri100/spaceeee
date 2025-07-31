@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://dxmdb7rl5ae43"]
+[gd_scene load_steps=6 format=3 uid="uid://nhfp7rjrisqv"]
 
 [ext_resource type="Texture2D" uid="uid://bpqv4y8n6yaed" path="res://art/Asteroid Brown.png" id="2_fmgr1"]
 [ext_resource type="Texture2D" uid="uid://blvorfg3ijg05" path="res://art/asteroid_Brown2.png" id="3_v17cv"]
