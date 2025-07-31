@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://vl8852osatbj"]
 
-[ext_resource type="Script" uid="uid://boudgaeotyat2" path="res://enemy/Aliens/alien_ship.gd" id="1_stv4k"]
+[ext_resource type="Script" path="res://enemy/Aliens/alien_ship.gd" id="1_stv4k"]
 [ext_resource type="Texture2D" uid="uid://d1gkiaxgb7bp" path="res://art/Alien_Ship.png" id="2_yj62q"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o745u"]

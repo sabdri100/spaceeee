@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://b5wr3a1jsadsr" path="res://enemy/Asteroids/enemy_asteroid.gd" id="1_qgh3d"]
 [ext_resource type="Texture2D" uid="uid://bpqv4y8n6yaed" path="res://art/Asteroid Brown.png" id="2_fmgr1"]
-[ext_resource type="Script" uid="uid://d2ssrysydu2bq" path="res://enemy/Asteroids/asteroid_hit_box.gd" id="2_v17cv"]
+[ext_resource type="Script" path="res://enemy/Asteroids/asteroid_hit_box.gd" id="2_v17cv"]
 [ext_resource type="Texture2D" uid="uid://blvorfg3ijg05" path="res://art/asteroid_Brown2.png" id="3_v17cv"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_u88vs"]

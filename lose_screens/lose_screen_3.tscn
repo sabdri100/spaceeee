@@ -75,7 +75,7 @@ position = Vector2(46.9142, -47.4401)
 texture = ExtResource("3_2p1h2")
 
 [node name="Alien4" type="Sprite2D" parent="."]
-position = Vector2(30, 204)
+position = Vector2(32, 201)
 rotation = -0.419743
 scale = Vector2(0.116933, 0.117524)
 skew = 0.040029
@@ -154,9 +154,9 @@ texture = ExtResource("9_uyq1r")
 
 [node name="Instrucctions" type="Label" parent="."]
 layout_mode = 0
-offset_left = -3.0
+offset_left = 1.0
 offset_top = 101.0
-offset_right = 108.0
+offset_right = 112.0
 offset_bottom = 155.0
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("8_dtoth")

@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://dv3a7174dkah"]
+[gd_scene load_steps=6 format=3 uid="uid://dhrdlqcacc7nq"]
 
-[ext_resource type="Script" uid="uid://bhhwseht6ceit" path="res://Levels_logic/level_3.gd" id="1_pr2o2"]
+[ext_resource type="Script" uid="uid://bhhwseht6ceit" path="res://Levels_logic/Level_3.gd" id="1_pr2o2"]
 [ext_resource type="PackedScene" uid="uid://b5dhvhel125t6" path="res://Player/ship.tscn" id="2_cyc04"]
 [ext_resource type="PackedScene" uid="uid://pg3cx4mpe6w2" path="res://parallax_background.tscn" id="3_ufpq0"]
 [ext_resource type="AudioStream" uid="uid://dm6wgcl0evmwu" path="res://audio/music/02 Dodging Obstacles.mp3" id="4_cyc04"]
