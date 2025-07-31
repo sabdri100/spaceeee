@@ -36,9 +36,10 @@ func _ready():
 	await get_tree().process_frame
 	var center = get_viewport().get_visible_rect().size/2
 	var direction = (center-global_position).normalized()
-	var speed = randf_range(150.0,275.0)
+	var speed = randf_range(60.0, 100.0)
 	linear_velocity = direction*speed
 	angular_velocity = randf_range(-2.0,2.0)
+	
 
 func _on_visible_on_screen_notifier_2d_screen_exited():
 	queue_free()
