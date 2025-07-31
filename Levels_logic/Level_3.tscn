@@ -1,30 +1,34 @@
-[gd_scene load_steps=6 format=3 uid="uid://bknoeb8yfejnl"]
+[gd_scene load_steps=6 format=3 uid="uid://dv3a7174dkah"]
 
-[ext_resource type="Script" uid="uid://dcaham560r3tf" path="res://Levels_logic/Level_3.gd" id="1_pr2o2"]
+[ext_resource type="Script" uid="uid://bhhwseht6ceit" path="res://Levels_logic/level_3.gd" id="1_pr2o2"]
 [ext_resource type="PackedScene" uid="uid://b5dhvhel125t6" path="res://Player/ship.tscn" id="2_cyc04"]
 [ext_resource type="PackedScene" uid="uid://pg3cx4mpe6w2" path="res://parallax_background.tscn" id="3_ufpq0"]
+[ext_resource type="AudioStream" uid="uid://dm6wgcl0evmwu" path="res://audio/music/02 Dodging Obstacles.mp3" id="4_cyc04"]
 [ext_resource type="FontFile" uid="uid://dxtfpitcxe58o" path="res://art/GrapeSoda.ttf" id="4_ybhn8"]
-[ext_resource type="AudioStream" uid="uid://crm0yhdjq353l" path="res://audio/music/06 Final Level.mp3" id="5_cyc04"]
 
-[node name="Level3" type="Node2D"]
+[node name="Level_3" type="Node2D"]
 script = ExtResource("1_pr2o2")
 
 [node name="ship" parent="." instance=ExtResource("2_cyc04")]
 
 [node name="EnemySpawner" type="Node2D" parent="."]
 
-[node name="AlienSpawnTimer" type="Timer" parent="."]
+[node name="LevelsTimer" type="Timer" parent="."]
+wait_time = 15.0
+autostart = true
 
 [node name="AsteroidSpawnTimer" type="Timer" parent="."]
-
-[node name="LevelTimer" type="Timer" parent="."]
-wait_time = 15.0
-one_shot = true
+wait_time = 0.85
 autostart = true
 
 [node name="spaceBackground" parent="." instance=ExtResource("3_ufpq0")]
 
-[node name="TimerLabel" type="Label" parent="."]
+[node name="Level1Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_cyc04")
+autoplay = true
+parameters/looping = true
+
+[node name="TimerLable" type="Label" parent="."]
 offset_left = 121.0
 offset_top = -2.0
 offset_right = 161.0
@@ -36,7 +40,5 @@ theme_override_font_sizes/font_size = 15
 text = "15.0"
 horizontal_alignment = 1
 
-[node name="Level3Music" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("5_cyc04")
-autoplay = true
-parameters/looping = true
+[connection signal="timeout" from="LevelsTimer" to="." method="_on_levels_timer_timeout"]
+[connection signal="timeout" from="AsteroidSpawnTimer" to="." method="_on_asteroid_spawn_timer_timeout"]

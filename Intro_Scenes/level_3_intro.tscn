@@ -104,7 +104,7 @@ theme_override_font_sizes/font_size = 0
 theme_override_styles/normal = SubResource("StyleBoxFlat_074og")
 text = "          Level 3: 
 Dodge The Asteroids,
- AND THE ALIENS"
+ BUT THEY'RE FASTER!"
 vertical_alignment = 1
 uppercase = true
 

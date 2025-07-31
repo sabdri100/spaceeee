@@ -1,0 +1,46 @@
+[gd_scene load_steps=8 format=3 uid="uid://c1kn6ag05h6cu"]
+
+[ext_resource type="Script" uid="uid://srtdso6khcg4" path="res://enemy/Asteroids/enemy_asteroid_L3.gd" id="1_erx84"]
+[ext_resource type="Texture2D" uid="uid://bpqv4y8n6yaed" path="res://art/Asteroid Brown.png" id="2_jpkw2"]
+[ext_resource type="Texture2D" uid="uid://blvorfg3ijg05" path="res://art/asteroid_Brown2.png" id="3_fwlsc"]
+[ext_resource type="Script" uid="uid://d2ssrysydu2bq" path="res://enemy/Asteroids/asteroid_hit_box.gd" id="4_i83rv"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_u88vs"]
+radius = 11.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rm00j"]
+radius = 15.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qgh3d"]
+radius = 13.0384
+
+[node name="Enemy Asteroid" type="RigidBody2D" groups=["damageable"]]
+gravity_scale = 0.0
+script = ExtResource("1_erx84")
+
+[node name="Sprite_A" type="Sprite2D" parent="."]
+scale = Vector2(0.1375, 0.140625)
+texture = ExtResource("2_jpkw2")
+
+[node name="Collision_A" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_u88vs")
+
+[node name="Sprite_B" type="Sprite2D" parent="."]
+rotation = 0.610865
+scale = Vector2(0.0559903, 0.0583924)
+texture = ExtResource("3_fwlsc")
+
+[node name="Collision_B" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_rm00j")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(0.187496, 1.125)
+scale = Vector2(0.78125, 0.5875)
+
+[node name="Area2D" type="Area2D" parent="." groups=["damageable"]]
+script = ExtResource("4_i83rv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_qgh3d")
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
