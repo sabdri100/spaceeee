@@ -116,7 +116,7 @@ uppercase = true
 [node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_4hy44")
 autoplay = true
-parameters/looping = false
+parameters/looping = true
 
 [connection signal="pressed" from="Start_Button" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="Exit_Button" to="." method="_on_exit_2_pressed"]

@@ -10,7 +10,7 @@
 [ext_resource type="FontFile" uid="uid://dxtfpitcxe58o" path="res://art/GrapeSoda.ttf" id="6_l471v"]
 [ext_resource type="Texture2D" uid="uid://d1gkiaxgb7bp" path="res://art/Alien_Ship.png" id="7_7t713"]
 [ext_resource type="Texture2D" uid="uid://blvorfg3ijg05" path="res://art/asteroid_Brown2.png" id="7_idp7t"]
-[ext_resource type="AudioStream" uid="uid://b337p3vpfuk6w" path="res://audio/music/04 Victory.mp3" id="8_g6jvr"]
+[ext_resource type="AudioStream" uid="uid://dq863e3qfsg8t" path="res://audio/music/04 Victory.mp3" id="8_g6jvr"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_y0ktu"]
 texture = ExtResource("2_g6jvr")

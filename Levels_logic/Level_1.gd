@@ -15,7 +15,7 @@ func _ready():
 	asteroid_timer.start()
 	timer_lable.text = str(levels_timer.wait_time) 
 
-func _process(delta: float) -> void:  
+func _process(_delta: float) -> void:  
 	var time_left = max(0.0, levels_timer.time_left)
 	timer_lable.text = str(time_left).pad_decimals(1)
 

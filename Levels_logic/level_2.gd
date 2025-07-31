@@ -34,7 +34,7 @@ func spawn_alien_ships():
 		mob_ship.position = pos
 		add_child(mob_ship)
 
-func _process(delta: float):
+func _process(_delta: float):
 	var time_left = max(0.0, level_timer.time_left)
 	timer_label.text = str(time_left).pad_decimals(1)
 

@@ -2,7 +2,7 @@ extends Control
 
 @onready var Title = $Title
 @onready var inst = $Instrucctions
-@onready var continue_button = $ContinueButon
+@onready var continue_buton = $ContinueButon
 @onready var exit_button = $ExitButton
 
 func _on_continue_buton_pressed():

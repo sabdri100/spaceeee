@@ -18,7 +18,7 @@ wait_time = 15.0
 autostart = true
 
 [node name="AsteroidSpawnTimer" type="Timer" parent="."]
-wait_time = 0.5
+wait_time = 0.85
 autostart = true
 
 [node name="spaceBackground" parent="." instance=ExtResource("3_jikk4")]
@@ -26,7 +26,7 @@ autostart = true
 [node name="Level1Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_a0j4s")
 autoplay = true
-parameters/looping = false
+parameters/looping = true
 
 [node name="TimerLable" type="Label" parent="."]
 offset_left = 121.0

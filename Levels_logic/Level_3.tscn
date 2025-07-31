@@ -13,11 +13,9 @@ script = ExtResource("1_pr2o2")
 
 [node name="EnemySpawner" type="Node2D" parent="."]
 
-[node name="AsteroidSpawnTimer" type="Timer" parent="."]
-wait_time = 0.5
-autostart = true
-
 [node name="AlienSpawnTimer" type="Timer" parent="."]
+
+[node name="AsteroidSpawnTimer" type="Timer" parent="."]
 
 [node name="LevelTimer" type="Timer" parent="."]
 wait_time = 15.0
@@ -41,4 +39,4 @@ horizontal_alignment = 1
 [node name="Level3Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_cyc04")
 autoplay = true
-parameters/looping = false
+parameters/looping = true

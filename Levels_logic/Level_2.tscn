@@ -37,7 +37,7 @@ horizontal_alignment = 1
 [node name="Level2Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_haacu")
 autoplay = true
-parameters/looping = false
+parameters/looping = true
 
 [connection signal="timeout" from="AlienSpawnTimer" to="." method="_on_alien_spawn_timer_timeout"]
 [connection signal="timeout" from="LevelTimer" to="." method="_on_level_timer_timeout"]
